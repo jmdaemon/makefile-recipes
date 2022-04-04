@@ -47,3 +47,28 @@ $(BUILD_DIR)/%.o: $(SRC_PREFIX)/%.c
 To build a library and binary target for the same project, you can use the `lib-exec-dbg-rel` Makefile recipe.
 
 Happy hacking!
+
+## Support for multiple operating systems
+
+To support multiple operating systems, you can include this snippet at the top of your Makefile:
+
+``` Makefile
+#
+# Operating System Settings
+#
+ifeq ($(OSTYPE),cygwin)
+	CLEANUP=rm -f
+	MKDIR=mkdir -p
+	TARGET_EXTENSION=out
+else ifeq ($(OS),Windows_NT)
+	CLEANUP=del /F /Q
+	MKDIR=mkdir
+	TARGET_EXTENSION=exe
+else
+	CLEANUP=rm -f
+	MKDIR=mkdir -p
+	TARGET_EXTENSION=out
+endif
+```
+
+This will use `del` on Windows, and `rm -f` on Linux.
