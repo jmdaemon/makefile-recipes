@@ -8,3 +8,8 @@ This Makefile has the following features:
     - build/release/bin
 - Include headers in top level include directory
 - Install binaries to /usr/local
+
+## Usage
+
+Specify your binary sources in the `$(SRCS)` variable,
+and set your binary executable name in `$(EXE)`.

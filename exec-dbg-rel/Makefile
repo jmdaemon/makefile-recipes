@@ -8,7 +8,7 @@ LDFLAGS =
 # Prefixes
 #
 # These are used to generate the build structure:
-# build/{debug,release}/{bin, lib}
+# build/{debug,release}/bin
 BUILD_PREFIX = build
 SRC_PREFIX = src
 BIN_PREFIX = bin
@@ -82,7 +82,7 @@ $(BUILD_DIR)/%.o: $(SRC_PREFIX)/%.c
 # Other rules
 #
 
-# prep: Creates the directories for the bin and lib targets
+# prep: Creates the directories for the bin target
 
 # Creates build/$(BIN_PREFIX)
 prep:
