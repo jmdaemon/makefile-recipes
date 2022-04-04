@@ -7,10 +7,10 @@ CFLAGS = -fPIC -Wall -Wextra -O2 -g
 LDFLAGS = -shared
 
 # Target
-TARGET_LIB = libtarget.so
+TARGET_LIB = 
 
 # Source & Object Files
-SRCS = main.c src1.c src2.c
+SRCS = 
 OBJS = $(SRCS:.c=.o)
 
 # Rules
